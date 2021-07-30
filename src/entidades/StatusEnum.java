@@ -1,0 +1,7 @@
+package entidades;
+
+public enum StatusEnum {
+
+	AGUARDANDO_CONFIRMACAO, PEDIDO_CONFIRMADO, SAIU_PARA_ENTREGA, ENTREGUE;
+
+}
