@@ -9,11 +9,18 @@ public class Pedido {
 	private Map<Bebida, Integer> itens;
 	private Cliente cliente;
 
-	public Pedido(Double valor,Map<Bebida,Integer>itens,Cliente cliente) {
+	public Pedido(Double valor, Map<Bebida, Integer> itens, Cliente cliente) {
 		this.valor = valor;
 		this.status = StatusEnum.AGUARDANDO_CONFIRMACAO;
 		this.itens = itens;
 		this.cliente = cliente;
+	}
+
+	public Pedido(Double valor, Map<Bebida, Integer> itens) {
+		this.valor = valor;
+		this.status = StatusEnum.AGUARDANDO_CONFIRMACAO;
+		this.itens = itens;
+
 	}
 
 	public Double getValor() {
@@ -31,7 +38,7 @@ public class Pedido {
 	public void setStatus(StatusEnum status) {
 		this.status = status;
 	}
-	
+
 	public Map<Bebida, Integer> getItens() {
 		return itens;
 	}
@@ -48,9 +55,4 @@ public class Pedido {
 		this.cliente = cliente;
 	}
 
-
-
-	}
-
-
-	
+}

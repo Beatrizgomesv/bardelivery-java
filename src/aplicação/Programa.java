@@ -1,28 +1,28 @@
 package aplicação;
 
 import java.text.DecimalFormat;
+import java.util.Collection;
 import java.util.Map;
 import java.util.Scanner;
 
 import entidades.Bebida;
 import entidades.Cliente;
-import entidades.Menu;
 import entidades.Pedido;
-import telas.JFmenu;
+import telas.JFMenu;
 
 public class Programa {
 
+	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		DecimalFormat df = new DecimalFormat("#,###.00");
+	
 
-		System.out.println("Seja Bem vindo a Adega do Chaves");
 		
-		JFmenu jf = new JFmenu();
+		
+		JFMenu jf = new JFMenu();
 		
 		jf.setVisible(true);
 	/*	System.out.println("MENU:");
-		menu.bebidas.forEach(bebida -> {
+		((Iterable<Bebida>) JFmenu.bebidas).forEach(bebida -> {
 			System.out.println("\n" + bebida.getNome() + "\nPreço:R$" + df.format(bebida.getPreco()) + "\nTipo:"
 					+ bebida.getTipo());
 		});
@@ -30,8 +30,7 @@ public class Programa {
 		String nomeDigitado = sc.next();
 		System.out.println("Digite a quantidade:");
 		int quantidadeDigitada = sc.nextInt();
-		Bebida bebida = menu.bebidas.stream().filter(bbd -> bbd.getNome().equals(nomeDigitado)).findFirst()
-				.orElse(null);
+	
 
 		System.out.println("Digite o seu nome: ");
 		String nome = sc.next();
@@ -39,10 +38,10 @@ public class Programa {
 		System.out.println("Digite o endereço da entrega: ");
 		String endereco = sc.next();
 		Cliente cliente = new Cliente(nome, endereco);
-		Pedido pedido = new Pedido(quantidadeDigitada * bebida.getPreco(), Map.of(bebida, quantidadeDigitada), cliente);
+	
 		pedido.getItens().keySet().stream().forEach(item -> System.out.println(pedido.getItens().get(item)+ " - " + item.getNome()));;
 		System.out.println("TOTAL: R$" + df.format(pedido.getValor()));
-		System.out.println("Pedido Confirmado"); */ 
-		
+		System.out.println("Pedido Confirmado");  
+	*/
 	}
 }

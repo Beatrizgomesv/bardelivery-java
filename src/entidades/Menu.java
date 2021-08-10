@@ -1,6 +1,7 @@
 package entidades;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class Menu {
@@ -17,4 +18,8 @@ public class Menu {
 		new Bebida ("Whisky",120.00,TipoBebida.DESTILADO)
 	);
 
+	public Bebida getBebidaByNome(String nome) {
+		return bebidas.stream().filter(bbd -> bbd.getNome().equals(nome)).findFirst()
+				.orElse(null);
+	}
 }
